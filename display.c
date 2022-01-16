@@ -92,6 +92,9 @@ void setPinOutputs(void) {
 }
 
 void enable4BitMode(void) {
+    // Pretty weird, but its what the spec says
+    // https://www.sparkfun.com/datasheets/LCD/HD44780.pdf - page46
+    
     writeHalfByte(3);
     __delay_ms(5);
     writeHalfByte(3);
